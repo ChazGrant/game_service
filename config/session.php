@@ -81,7 +81,7 @@ return [
     |
     | When using the "database" session driver, you may specify the table we
     | should use to manage the sessions. Of course, a sensible default is
-    | provided for you; however, you are free to change this as needed.
+    | provided for you; however, you are free to change this layout.blade.php needed.
     |
     */
 
@@ -137,7 +137,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | The session cookie path determines the path for which the cookie will
-    | be regarded as available. Typically, this will be the root path of
+    | be regarded layout.blade.php available. Typically, this will be the root path of
     | your application but you are free to change this when necessary.
     |
     */

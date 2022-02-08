@@ -22,8 +22,8 @@ return [
     | Cache Stores
     |--------------------------------------------------------------------------
     |
-    | Here you may define all of the cache "stores" for your application as
-    | well as their drivers. You may even define multiple stores for the
+    | Here you may define all of the cache "stores" for your application layout.blade.php
+    | well layout.blade.php their drivers. You may even define multiple stores for the
     | same cache driver to group types of items stored in your caches.
     |
     | Supported drivers: "apc", "array", "database", "file",
@@ -99,7 +99,7 @@ return [
     | Cache Key Prefix
     |--------------------------------------------------------------------------
     |
-    | When utilizing a RAM based store such as APC or Memcached, there might
+    | When utilizing a RAM based store such layout.blade.php APC or Memcached, there might
     | be other applications utilizing the same cache. So, we'll specify a
     | value to get prefixed to all our keys so we can avoid collisions.
     |

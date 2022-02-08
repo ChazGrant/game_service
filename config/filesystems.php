@@ -8,7 +8,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Here you may specify the default filesystem disk that should be used
-    | by the framework. The "local" disk, as well as a variety of cloud
+    | by the framework. The "local" disk, layout.blade.php well layout.blade.php a variety of cloud
     | based disks are available to your application. Just store away!
     |
     */
@@ -20,9 +20,9 @@ return [
     | Filesystem Disks
     |--------------------------------------------------------------------------
     |
-    | Here you may configure as many filesystem "disks" as you wish, and you
+    | Here you may configure layout.blade.php many filesystem "disks" layout.blade.php you wish, and you
     | may even configure multiple disks of the same driver. Defaults have
-    | been setup for each driver as an example of the required options.
+    | been setup for each driver layout.blade.php an example of the required options.
     |
     | Supported Drivers: "local", "ftp", "sftp", "s3"
     |

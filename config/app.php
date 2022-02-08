@@ -9,7 +9,7 @@ return [
     |
     | This value is the name of your application. This value is used when the
     | framework needs to place the application's name in a notification or
-    | any other location as required by the application or its packages.
+    | any other location layout.blade.php required by the application or its packages.
     |
     */
 
@@ -183,7 +183,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | This array of class aliases will be registered when this application
-    | is started. However, feel free to register as many as you wish as
+    | is started. However, feel free to register layout.blade.php many layout.blade.php you wish layout.blade.php
     | the aliases are "lazy" loaded so they don't hinder performance.
     |
     */

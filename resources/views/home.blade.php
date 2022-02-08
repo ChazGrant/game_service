@@ -2,11 +2,13 @@
 @section('title') Главная @endsection
 @section('main_content')
 
+    <h2>Последние выводы</h2>
     @foreach($users as $user)
         <ul class="list-group list-group-horizontal">
-        <li class="list-group-item flex-fill">{{ $user["name"] }} </li>
-        <li class="list-group-item flex-fill"> {{ $user["updated_at"] }} </li>
-        <li class="list-group-item flex-fill">Какая-то сумма р.</li>
+        <li class="w-25 bg-warning bg-gradient text-black list-group-item">{{ $user["name"] }} </li>
+        <li class="w-25 bg-info bg-gradient list-group-item"> {{ $user["updated_at"] }} </li>
+        <li class="w-25 bg-info bg-gradient list-group-item">Какая-то сумма р.</li>
+        <li class="w-25 bg-info bg-gradient list-group-item">Номер карточки</li>
         </ul>
     @endforeach
 

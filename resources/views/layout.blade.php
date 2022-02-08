@@ -30,7 +30,7 @@
             <div class="text-end">
                 @if(auth()->check())
                     <a style="text-decoration: none; color: white" href="/profile"><button type="button" class="btn btn-outline-light me-2">{{ auth()->user()->name }}</button></a>
-                    <a style="text-decoration: none; color: white" href="/logout"><button type="button" class="btn btn-warning">Выход с аккаунта</button></a>
+                    <a style="text-decoration: none; color: white" href="/logout"><button type="button" class="btn btn-warning">Выход</button></a>
                 @else
                     <a style="text-decoration: none; color: white" href="/auth"><button type="button" class="btn btn-outline-light me-2">Вход</button></a>
                     <a style="text-decoration: none; color: white" href="/reg"><button type="button" class="btn btn-warning">Регистрация</button></a>
@@ -40,10 +40,10 @@
         </div>
     </div>
 </header>
-<div class="container-fluid mt-5">
+<div class="container mt-5">
     @yield('main_content')
 </div>
-<footer class="bg-dark text-white mb-sm-0 py-3 my-4">
+<footer class="container-fluid bg-dark text-white w-100 mb-sm-0 py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2">Features</a></li>
