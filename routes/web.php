@@ -32,6 +32,6 @@ Route::post("/reg/check", [AuthController::class, 'reg_check']);
 
 Route::get("/profile", [MainController::class, 'profile']);
 
-Route::get("logout", [AuthController::class, 'logout']);
+Route::get("/logout", [AuthController::class, 'logout']);
 
-
+Route::get('/games', [MainController::class, 'games']);
