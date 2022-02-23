@@ -35,3 +35,5 @@ Route::get("/profile", [MainController::class, 'profile']);
 Route::get("/logout", [AuthController::class, 'logout']);
 
 Route::get('/games', [MainController::class, 'games']);
+
+Route::get("/games/{gameTitle}", [MainController::class, 'game']);

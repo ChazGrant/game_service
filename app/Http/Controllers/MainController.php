@@ -54,17 +54,53 @@ class MainController extends Controller
 
     public function games()
     {
-        for ($id = 1; $id <= 9; ++$id) {
-            $url = asset("game_images/". $id .".jpg");
-
-            DB::table('game_models')
-                ->where('id', '=', $id)
-                ->update(["image_path" => $url]);
-            }
+        // Обновление инфы в БД
+//        for ($id = 1; $id <= 9; ++$id) {
+//            $url = asset("game_images/". $id .".jpg");
+//
+//            DB::table('game_models')
+//                ->where('id', '=', $id)
+//                ->update(["image_path" => $url]);
+//            }
 
         $allGames = GameModel::all();
         return view("games", [
             "games" => $allGames
+        ]);
+    }
+
+    public function game($gameTitle)
+    {
+        $mines = 30; // количество мин на поле
+        $fx    = 9;  // ширина поля (в клетках)
+        $fy    = 9;  // высота поля (в клетках)
+
+        for ($y = 0; $y <= $fy; $y++) {
+            for ($x = 0; $x <= $fx; $x++) {
+                $minefield[$x][$y] = '0';
+            }
+        }
+
+        for ($i = 0; $i < $mines; $i++) {
+            $randx = rand(0, $fx);  // генерируем случайные координаты
+            $randy = rand(0, $fy);  //
+
+            if ($minefield[$randx][$randy] == 'X') { // координаты совпали и мина уже есть
+                $i--; // тогда не ставим мину, а скажем попробовать лишний раз
+            } else {
+                $minefield[$randx][$randy] = 'X'; // ставим мину
+            }
+        }
+
+        return view('game', [
+            "mines" => $mines,
+            "fx" => $fx,
+            "fy" => $fy,
+            "minefield" => $minefield
+        ]);
+        $gameInfo = GameModel::all()->where("name", $gameTitle)[0];
+        return view("game", [
+            "gameInfo" => $gameInfo
         ]);
     }
 
